@@ -2,11 +2,20 @@
 
 [![Build Status](https://travis-ci.org/MangoTheCat/radarchart.svg?branch=master)](https://travis-ci.org/MangoTheCat/radarchart) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/MangoTheCat/radarchart?branch=master&svg=true)](https://ci.appveyor.com/project/MangoTheCat/radarchart) [![CRAN Status](http://www.r-pkg.org/badges/version/radarchart)](http://www.r-pkg.org/pkg/radarchart)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/radarchart)](http://www.r-pkg.org/pkg/radarchart)
+[![Total CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/radarchart)](http://www.r-pkg.org/pkg/radarchart)
+
 
 
 An R implementation of the radar chart from the [chart.js](http://www.chartjs.org/) javascript library.
 
-To install direct from GitHub you'll need devtools installed. Assuming you have this run:
+## Installation
+
+You can install from CRAN.
+```r
+install.packages("radarchart")
+```
+
+To install the latest version direct from GitHub you'll need devtools installed. Assuming you have this run:
 ```r
 devtools::install_github("MangoTheCat/radarchart")
 ```
@@ -16,8 +25,11 @@ Or if you want to hack about with the code then clone the repository, change dir
 devtools::install()
 ```
 
-Note: `htmlwidgets` packages don't work well with `devtools::load_all()`. Once installed you can make a radar chart
+Note: `htmlwidgets` packages don't work well with `devtools::load_all()`.
 
+## Usage
+
+Once installed you can make a radar chart
 
 ```r
 library(radarchart)
@@ -49,3 +61,22 @@ chartJSRadar(scores, maxScale = 10, showToolTipLabel=TRUE)
 ```
 <img src="inst/figs/readmePlot02.jpg" alt="Static image of example output"  />
 <p class="caption">Static version. Real plots are interactive</p>
+
+## Shiny
+
+As it's based on htmlwidgets it's easy to use `radarchart` with Shiny. Just use the 
+
+```r
+chartJSRadarOutput("ID", width = "450", height = "300")
+```
+function in your `ui.R` and call `chartJSRadar` as normal in your `server.R`. A minimal example can be found in [`inst/shiny-examples/basic`](https://github.com/MangoTheCat/radarchart/tree/master/inst/shiny-examples/basic). You can run this with the `runExampleApp` function
+
+```r
+runExampleApp("basic")
+```
+
+An `"options"` app is available to help construct more customised radar charts.
+
+## License
+
+MIT © Mango Solutions, Nick Downie
