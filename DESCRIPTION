@@ -1,14 +1,14 @@
 Package: radarchart
-Title: Radar Chart from Chart.js
-Version: 0.2.0
+Title: Radar Chart from 'Chart.js'
+Version: 0.3.1
 Authors@R: c(person("Doug", "Ashton", email = "dashton@mango-solutions.com", role = c("aut", "cre")),
              person("Shane", "Porter", email = "sporter@mango-solutions.com", role = c("aut")),
              person("Nick", "Downie", role = c("ctb"), comment = "chart.js library"),
              person("Tanner", "Linsley", role = c("ctb"), comment = "chart.js library"),
              person("William", "Entriken", role = c("ctb"), comment = "chart.js library"))
-Description: Create interactive radar charts using the 'Chart.js' JavaScript library
-    and the 'htmlwidgets' package. Chart.js (http://www.chartjs.org/) is a 
-    lightweight library that supports several types of simple chart using the HTML5 
+Description: Create interactive radar charts using the 'Chart.js' 'JavaScript' library
+    and the 'htmlwidgets' package. 'Chart.js' <http://www.chartjs.org/> is a 
+    lightweight library that supports several types of simple chart using the 'HTML5' 
     canvas element. This package provides an R interface specifically to the 
     radar chart, sometimes called a spider chart, for visualising multivariate data.
 Depends: R (>= 3.1.2)
@@ -21,7 +21,7 @@ RoxygenNote: 5.0.1
 Suggests: testthat, knitr, rmarkdown, tidyr, shiny
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2016-05-08 20:05:59 UTC; douglas
+Packaged: 2016-12-20 09:46:17 UTC; douglas
 Author: Doug Ashton [aut, cre],
   Shane Porter [aut],
   Nick Downie [ctb] (chart.js library),
@@ -29,4 +29,4 @@ Author: Doug Ashton [aut, cre],
   William Entriken [ctb] (chart.js library)
 Maintainer: Doug Ashton <dashton@mango-solutions.com>
 Repository: CRAN
-Date/Publication: 2016-05-09 06:25:11
+Date/Publication: 2016-12-20 11:47:12
